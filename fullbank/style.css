@@ -89,12 +89,18 @@ select {
     padding: 1rem 2rem;
     cursor: pointer;
     background: transparent;
-    color: #e1e1e6;
+    color: #8257e6;
     border: 2px solid currentColor;
     border-radius: 4px;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     transition: 0.25s;
+    background-color: #e1e1e6 ;
+
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;       /* remove default arrow */  /* add custom arrow */
+ 
 }
 
 select:focus {
