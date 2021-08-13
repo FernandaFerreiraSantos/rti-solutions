@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Fulbank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="POST" action="calcular.php">
+        <p>ACRÍSSIMO SALARIAL</p>
+
+        <label for="nome">
+            Nome
+            <input class="texto" type="text" id="nome" name="nome" required>
+        </label>
+
+        <label for="salario">
+            Salário (em R$)
+            <input class="texto" type="text" id="salario" name="salario" required>
+        </label>
+
+        <!-- <div class="lalallalla"></div>   div.algumacoisa → atalho -->
+
+        <div class="generos">
+            <label>Gênero:</label>
+
+            <label for="feminino">
+                <input type="radio" id="feminino" name="genero" value="f">Feminino
+            </label>
+
+            <label for="masculino">
+                <input type="radio" id="masculino" name="genero" value="m">Masculino
+            </label>
+
+            <label for="outros">
+                <input type="radio" id="outros" name="genero" value="o">Outros
+            </label>
+        </div>
+
+        <label id="cargosLabel" for="cargos">
+            Cargos
+            <select id="cargos" name="cargos">
+                <option value="" id="selecione" selected disabled value="">SELECIONE:</option>
+
+                <!-- Se nao colocarmos um value no option o back-end irá pegar o texto entro do option -->
+
+                <!-- <option value="estagiario">Estagiário</option>
+                <option value="caixa">Caixa</option>
+                <option value="atendente">Atendente comercial</option>
+                <option value="agente">Agente comercial</option>
+                <option value="assistente">Assistente da gerência</option>
+                <option value="gerente">Gerente</option> -->
+                <option>Estagiário</option>
+                <option>Gerente de Projetos</option>
+                <option>Gerente de Produtos</option>
+                <option>Desenvolvimento back-end</option>
+                <option>Desenvolvedor front-end</option>
+                <option>DevOps</option>
+                <option>Design UX/UI</option>
+                <option>QA</option>
+                <option>Engenheiro de Software</option>
+                <option>Aquitetos</option>
+                <option>DBA</option>
+                <option>Analista de Sistemas</option>
+            </select>
+        </label>
+
+        <button>Calcular Aumento</button>
+
+    </form>
+
+</body>
+
+</html>

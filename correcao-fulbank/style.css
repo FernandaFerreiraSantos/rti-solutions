@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #121214;
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e1e1e6;
+    margin-bottom: 5rem;
+    user-select: none;
+}
+
+form, main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 35rem;
+    background: #fff;
+    padding: 3.5rem;
+    border-radius: 1rem;
+    background-color: #202024;
+
+}
+
+label {
+    width: 100%;
+    color: #e1e1e6;
+    align-items: flex-start;
+    transition: 0.15s linear;
+    user-select: none;
+}
+
+label:focus-within {
+    color: #8257e6;
+
+}
+
+/* input {
+    outline: 0;
+    font-size: 1.25rem;
+    color: #8257e6;
+    background-color: #e1e1e6;
+    padding: 1rem 0 0.5rem 0;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #e1e1e6;
+    margin-bottom: 2rem;
+    transition: 0.15s linear;
+} */
+
+.texto{
+    font-size: 1.25rem;
+    color: #8257e6;
+    padding: 1rem 0 0.5rem 0;
+    width: 100%;
+    border: none;
+    border: 2px solid #e1e1e6;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    transition: 0.15s linear;
+}
+
+.texto:focus {
+    outline: none;
+    border-color: #8257e6;
+}
+
+.generos label{
+    padding: 5px 5px;   
+}
+
+/* .generos {
+    gap: 10px;
+} */
+
+/* input-radio input{
+    display: flex;
+    width: fit-content;
+    width: 30px;
+    gap: 12;
+} */
+
+#cargosLabel {
+    margin-top: 2rem;
+}
+
+select {
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    color: #8257e6;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    transition: 0.25s;
+    background-color: #e1e1e6 ;
+
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+ 
+}
+
+select:focus {
+    outline: none;
+    border-color: #8257e6;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background: transparent;
+    color: #8257e6;
+    border: 2px solid currentColor;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    outline: none;
+    background: #8257e6;
+    color: #e1e1e6;
+}
