@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Fretes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="POST" action="calcular.php">
+        <p>CALCULADORA</p>
+
+            <label for="cidadeOrigem">
+                Cidade de Origem
+                <input type="text" id="cidadeOrigem" name="cidadeOrigem" required>
+            </label>
+
+            <label for="cidadeDestino">
+                Cidade de Destino
+                <input type="text" id="cidadeDestino" name="cidadeDestino" required>
+            </label>
+
+        <label for="distancia">
+            Distância (em KM)
+            <input type="number" min="0" id="distancia" name="distancia" required>
+        </label>
+
+        <label for="pedagios">
+            Quantidade de Pedágios
+            <input type="number" min="0" id="pedagios" name="pedagios" required>
+        </label>
+
+
+        <button>Calcular</button>
+
+    </form>
+
+</body>
+
+</html>

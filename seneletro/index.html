@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Conta de Luz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="POST" action="calcular.php">
+        <p>CONTA DE LUZ</p>
+
+        <label for="nomeCompleto">
+            Nome Completo
+            <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+        </label>
+
+        <label for="endereco">
+            Endereço
+            <input type="text" id="endereco" name="endereco" required>
+        </label>
+
+        <label for="consumo">
+            Consumo (em kWh)
+            <input type="number" min="0" id="consumo" name="consumo" required>
+        </label>
+
+
+        <button>Calcular</button>
+
+    </form>
+
+</body>
+
+</html>
