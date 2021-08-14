@@ -1,29 +1,31 @@
 <?php
 
-if (isset($_POST["nomeCompleto"]) && isset($_POST["endereco"]) && isset($_POST["consumo"])) {
+if (
+    isset($_POST["nome"]) && isset($_POST["rua"]) &&
+    isset($_POST["numero"]) && isset($_POST["consumo"])
+) {
 
-    $nomeCompleto = $_POST["nomeCompleto"];
-    $endereco = $_POST["endereco"];
+    $nome = $_POST["nome"];
+    $rua = $_POST["rua"];
+    $numero = $_POST["numero"];
     $consumo = $_POST["consumo"];
-    $totalContaBruto;
 
     if ($consumo > 120) {
-        $totalContaBruto = $consumo * 0.42;
-        $class = "vermelho";
-        $agradecimento = "Você não economizou :(";
+        $valorTotal = $consumo * 0.42;
+        $estilo = "alto-consumo";
+        $agradecimento = "";
     } else {
-        $totalContaBruto = $consumo * 0.32;
-        $class = "verde";
-        $agradecimento = "Obrigado por economizar!";
+        $valorTotal = $consumo * 0.32;
+        $estilo = "baixo-consumo";
+        $agradecimento = "<h2 class='baixo-consumo'>Obrigado por economizar</h2>";
     }
-
-    $totalConta = number_format((float)$totalContaBruto, 2, ',', '');
 } else {
-    echo "ERRO AO ENVIAR FORMULÁRIO!";
+    //neste caso, o usuário não enviou os dados na requisição
+    echo "Você não enviou os dados corretamente";
+    die;
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,22 +33,18 @@ if (isset($_POST["nomeCompleto"]) && isset($_POST["endereco"]) && isset($_POST["
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Conta de Luz</title>
-    <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Valor do frete</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <form method="POST" action="calcular.php">
-        <p class="linhas">Conta de Luz de <?= $nomeCompleto ?> </p>
-        <p class="linhas"><?= $endereco ?></p>
-        <p class="linhas"><span class="<?= $class ?>">Consumo: <?= $consumo ?>kWh</span></p>
-        <p class="linhas">Valor a pagar: R$<?= $totalConta ?></p>
-        <p class="linhas"><?= $agradecimento ?></p>
-
-
-    </form>
-
+    <main>
+        <h1>Conta de luz de <?= $nome ?>.</h1>
+        <p><?= "$rua, $numero" ?></p>
+        <p class="<?= $estilo ?>">Consumo: <?= $consumo ?>kWh.</p>
+        <p>Valor a pagar: R$ <em><?= number_format($valorTotal, 2, ",", ".") ?></em>.</p>
+        <?= $agradecimento ?>
+    </main>
 </body>
 
 </html>

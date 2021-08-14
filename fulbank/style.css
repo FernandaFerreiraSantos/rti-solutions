@@ -7,7 +7,7 @@
 body {
     min-height: 100vh;
     background: #121214;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     display: grid;
     place-items: center;
 }
@@ -74,8 +74,20 @@ label:focus-within {
     border-color: #8257e6;
 }
 
+.generos {
+    width: 100%;
+    /* background-color: #121214; */
+    display: flex;
+    padding: 1rem;
+}
+
 .generos label{
-    padding: 0px 3px;   
+    padding: 0px 5px 0px 0px;   
+}
+
+.generos input {
+    border: 10px;
+
 }
 
 #cargosLabel {
